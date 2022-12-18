@@ -3,15 +3,40 @@
     --color-text-light: #FFFFFF;
     --color-hader: #4D5AE5;
     --color-link: #434455;
+    --background-color: #FFFFFF;
 }
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #F5F7FA;
-    color: #2E2F42;
-}
-ul { list-style: none;} /* Я розумію що в завданні було сказано про глобальні стилі, але це об'єктивно правильніше */
-a {text-decoration: none;}
 
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ccc;
+    color: #2E2F42;
+    outline: 2px solid tomato;
+}
+h1, h2, h3, h4, {
+    margin: 0;
+    padding: 0;   
+}
+ul { 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+} 
+a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
 /* приховати код */
 .visually-hidden { 
     position: absolute; 
@@ -27,17 +52,11 @@ a {text-decoration: none;}
 }
 
 /* abotu_header */
-.index-body {
-    position: relative;
-    width: 1440px;
-    height: 2593px;
-    background: #FFFFFF;
-}
 .header {
-    height: 72px;
-    left: 0px;
-    top: 0px;
-    background: #FFFFFF;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 24px 156px;
+    background: #ffffff;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
                 0px 1px 1px rgba(46, 47, 66, 0.16), 
                 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -47,15 +66,8 @@ a {text-decoration: none;}
         flex-direction: row;
         align-items: flex-start;
         padding: 0px;
-        position: absolute;
-        width: 115px;
-        height: 24px;
-        left: 156px;
-        top: 24px;
     }
     .logo-w {
-            width: 44px;
-            height: 24px;
             font-family: 'Raleway', sans-serif;
             font-weight: 800;
             font-size: 18px;
@@ -70,8 +82,6 @@ a {text-decoration: none;}
             flex-grow: 0;
         }    
     .logo-s {
-            width: 71px;
-            height: 24px;
             font-family: 'Raleway', sans-serif;
             font-weight: 800;
             font-size: 18px;
@@ -86,20 +96,13 @@ a {text-decoration: none;}
             flex-grow: 0;
         }
     .header-nav {
-        margin-top: 0;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        padding: 0px;
         gap: 40px;
-        position: absolute;
-        width: 261px;
-        height: 24px;
-        left: 348px;
-        top: 24px;
     }
         .header-nav-link {
-            font-weight: 500;
+            font-weight: 700;
             font-size: 16px;
             line-height: 1.5;
             letter-spacing: 0.02em;
@@ -107,7 +110,6 @@ a {text-decoration: none;}
             flex: none;
             order: 1;
             flex-grow: 0;
-            height: 24px; 
         } 
         .header-nav-link:hover,
         .header-nav-link:focus {
@@ -116,57 +118,48 @@ a {text-decoration: none;}
         .header-nav-link.current  {
             color: var(--color-hader);
         }
-
-    .header-contacts-linc-tel {
-        position: absolute;
-        width: 151px;
-        height: 24px;
-        left: 1133px;
-        top: 24px;
+    .header-kontakt {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    .header-contacts-linc-kontakt {
         font-weight: 400;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--color-link);
     }
-    .header-contacts-linc-mail {
-        position: absolute;
-        width: 153px;
-        height: 24px;
-        left: 940px;
-        top: 24px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--color-link);
-    }
-    .header-contacts-linc-tel:hover, .header-contacts-linc-mail:hover,
-    .header-contacts-linc-tel:focus, .header-contacts-linc-mail:focus {
+    .header-contacts-linc-kontakt:hover,
+    .header-contacts-linc-kontakt:focus {
         color: var(--color-hader);
     }
 
 /* abotu_main */
+/* section_hero */
 .main-index {
-    height: 2211px;
+    width: 1440px;
+    margin: 0 auto;
 }
 .main-section-tagline {
     padding-top: 192px;
     padding-bottom: 192px;
     background: #2E2F42;
+    text-align: center;
 }
     .main-section-tagline-text {
+        margin: 0;
+        margin-bottom: 48px;
         font-weight: 500;
         font-size: 56px;
         line-height: 1;
-        text-align: center;
         letter-spacing: 0.02em;
         color: var(--color-text-light);
     }
     .main-section-tagline-button {
+        border: 1px solid transparent;
         font-family:inherit;
-        margin-left: 635px;
-        flex-direction: row;
         padding: 16px 32px;
         cursor: pointer;
         background: #4D5AE5;
@@ -176,8 +169,7 @@ a {text-decoration: none;}
         font-weight: 500;
         font-size: 16px;
         line-height: 1.25;
-        display: flex;
-        align-items: center;
+        text-align: center;
         letter-spacing: 0.04em;
         color: var(--color-text-light);;
 
@@ -196,52 +188,34 @@ a {text-decoration: none;}
         border-radius: 4px;
     }
 /* abotu_section_skills */
-.main-skills {
-    margin: 795px 120px 156px 156px;
+.section-skills {
+    background-color: var(--background-color);
 }
-    .main-skills-strategy {
-        position: absolute;
-        width: 264px;
-        height: 104px;
-        left: 156px;
-        top: 795px;
+.main-skills {
+    width: 1152px;
+    padding: 120px 12px;
+    margin: auto;
+}
+    .main-skills-list {
     }
-    .main-skills-punctuality {
-        position: absolute;
-        width: 264px;
-        height: 104px;
-        left: 444px;
-        top: 795px;
-    }
-    .main-skills-diligence {
-        position: absolute;
-        width: 264px;
-        height: 104px;
-        left: 732px;
-        top: 795px;
-    }
-    .main-skills-technologies {
-        position: absolute;
-        width: 264px;
-        height: 104px;
-        left: 1020px;
-        top: 795px;
+    .main-skills-ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 24px;
     }
         .main-skills-h {
+            margin: 0;
             margin-bottom: 8px;
-            width: 264px;
-            height: 24px;
             font-weight: 500;
             font-size: 20px;
             line-height: 1.2;
             letter-spacing: 0.02em;
             color: var(--color-text);
-            
         }
         .main-skills-p {
-            margin-top: 0px;
+            margin: 0px;
             width: 264px;
-            height: 72px;
             font-weight: 400;
             font-size: 16px;
             line-height: 1.5;
@@ -251,16 +225,39 @@ a {text-decoration: none;}
         }
 /* abotu_section_promo */
 .main-promo {
-    margin-bottom: 120px;
-    position: absolute;
-    width: 1128px;
-    height: 412px;
-    left: 156px;
-    top: 1019px;
-
+    width: 1152px;
+    padding: 0 12px;
+    padding-bottom: 120px;
+    margin: auto;
 }
     .main-promo-h {
-        margin-bottom: 0px;
+        margin: 0px;
+        margin-bottom: 72px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: var(--color-text);
+    }
+    .main-promo-photo { 
+        width: 360px;
+        height: 300px;
+    }
+ /* abotu_section_team */ 
+ .section-skills.grey {
+    background: #F4F4FD;   
+ }  
+ .main-team {
+    width: 1152px;
+    padding: 120px 12px;
+    padding-bottom: 120px;
+    margin: auto;
+ }
+     .main-team-h {
+        margin: 0;
+        margin-bottom: 72px;
         font-weight: 500;
         font-size: 36px;
         line-height: 1.1;
@@ -269,39 +266,9 @@ a {text-decoration: none;}
         text-transform: capitalize;
         color: var(--color-text);
     }
-    .main-promo-photo-one { 
-        position: absolute;
-        width: 360px;
-        height: 300px;
-        left: 0px;
-        top: 112px;
-    }
-    .main-promo-photo-two {
-        position: absolute;
-        width: 360px;
-        height: 300px;
-        left: 384px;
-        top: 112px;
-    }
-    .main-promo-photo-three {
-        position: absolute;
-        width: 360px;
-        height: 300px;
-        left: 768px;
-        top: 112px;
-
-    }
- /* abotu_section_team */   
- .main-team {
-    margin-top: 0px;
-    position: absolute;
-    width: 1440px;
-    height: 732px;
-    left: 0px;
-    top: 1551px;
-    background: #F4F4FD;
- }
     .main-team h3 {
+        margin-top: 32px;
+        margin-bottom: 8px;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
@@ -310,6 +277,7 @@ a {text-decoration: none;}
         color: var(--color-text);
     }
     .main-team p {
+        margin: 0;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.5;
@@ -317,47 +285,9 @@ a {text-decoration: none;}
         letter-spacing: 0.02em;
         color: #434455;
     }
-    .main-team-h {
-        margin-top: 120px;
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 1.1;
-        text-align: center;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
-        color: var(--color-text);
-    }
-    .main-team-li-one {
-        position: absolute;
-        left: 156px;
-        top: 232px;
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
-                    0px 1px 1px rgba(46, 47, 66, 0.16), 
-                    0px 2px 1px rgba(46, 47, 66, 0.08);
-        border-radius: 0px 0px 4px 4px;
-    }
-    .main-team-li-two {
-        position: absolute;
-        left: 444px;
-        top: 232px;
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
-                    0px 1px 1px rgba(46, 47, 66, 0.16), 
-                    0px 2px 1px rgba(46, 47, 66, 0.08);
-        border-radius: 0px 0px 4px 4px;
-    }
-    .main-team-li-three {
-        position: absolute;
-        left: 732px;
-        top: 232px;
-        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
-                    0px 1px 1px rgba(46, 47, 66, 0.16), 
-                    0px 2px 1px rgba(46, 47, 66, 0.08);
-        border-radius: 0px 0px 4px 4px;
-    }
-    .main-team-li-four {
-        position: absolute;
-        left: 1020px;
-        top: 232px;
+
+    .main-team-li {
+        padding-bottom: 32px;
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
                     0px 1px 1px rgba(46, 47, 66, 0.16), 
                     0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -365,13 +295,13 @@ a {text-decoration: none;}
     }
 /* abotu_footer */ 
 .footer {
-    margin-top: 120px;
-    padding-top: 100px;
-    padding-left: 156px;
-    padding-bottom: 100px;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 100px 156px;
     background: #2E2F42;
 }
 .header-logo-footer {
+    margin-bottom: 16px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -379,8 +309,6 @@ a {text-decoration: none;}
     height: 22px;
 }
     .logo-w-footer {
-        width: 44px;
-        height: 22px;
         font-family: 'Raleway', sans-serif;
         font-weight: 800;
         font-size: 18px;
@@ -394,8 +322,6 @@ a {text-decoration: none;}
         flex-grow: 0;
     }
     .logo-s-footer {
-        width: 71px;
-        height: 22px;
         font-family: 'Raleway', sans-serif;
         font-weight: 800;
         font-size: 18px;
@@ -409,8 +335,8 @@ a {text-decoration: none;}
         flex-grow: 0;
     }
 .footer p {
+    margin: 0;
     width: 264px;
-    height: 72px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -419,26 +345,19 @@ a {text-decoration: none;}
 }
 /*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 /* PARTFOLIO */
-.portfolio-body {
-    position: relative;
-    width: 1440px;
-    height: 2074px;
-    background: #FFFFFF;
-}
-.projekts-section {
-    margin-left: 0px;
-    width: 1440px;
-    height: 1548px;
-}
-/* Гребані КНОПКИ */ 
-.filfers-button {
-    margin-top: 96px;
-    margin-left: 427px;
-    margin-bottom: 72px;
+/* Гребані КНОПКИ */
+.potfolio-section {
+    width: 1152px;
+    padding: 96px 12px 120px;
+    margin: auto;
+} 
+.main-skills-ul.filfers-button {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 24px;
+    margin-bottom: 72px;
+    
 }
 .filfers-button-potfolio {
     cursor: pointer;
@@ -476,85 +395,11 @@ a {text-decoration: none;}
     }
 /* Projekts section */ 
 
-.projekts-section-bloc-a {
+.projekts-section-bloc {
     box-sizing: border-box;
-    position: absolute;
     width: 360px;
     height: 420px;
     margin: 0px 0px 48px 156px;
-    border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-.projekts-section-bloc-b {
-    box-sizing: border-box;
-    position: absolute;
-    width: 360px;
-    height: 420px;
-    margin: 0px 0px 48px 540px;
-    border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-.projekts-section-bloc-c {
-    box-sizing: border-box;
-    position: absolute;
-    width: 360px;
-    height: 420px;
-    margin: 0px 0px 48px 924px;
-    border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.projekts-section-bloc-d {
-    box-sizing: border-box;
-    position: absolute;
-    width: 360px;
-    height: 420px;
-    margin: 540px 0px 48px 156px;
-    border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-.projekts-section-bloc-e {
-    box-sizing: border-box;
-    position: absolute;
-    width: 360px;
-    height: 420px;
-    margin: 540px 0px 48px 540px;
-    border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-.projekts-section-bloc-f {
-    box-sizing: border-box;
-    position: absolute;
-    width: 360px;
-    height: 420px;
-    margin: 540px 0px 48px 924px;
-    border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-.projekts-section-bloc-g {
-    box-sizing: border-box;
-    position: absolute;
-    width: 360px;
-    height: 420px;
-    margin: 1008px 0px 48px 156px;
-    border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-.projekts-section-bloc-h {
-    box-sizing: border-box;
-    position: absolute;
-    width: 360px;
-    height: 420px;
-    margin: 1008px 0px 48px 540px;
-    border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-.projekts-section-bloc-i {
-    box-sizing: border-box;
-    position: absolute;
-    width: 360px;
-    height: 420px;
-    margin: 1008px 0px 48px 924px;
     border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -566,9 +411,6 @@ a {text-decoration: none;}
     color: var(--color-text);
 }
 .projekts-section-p-top, .projekts-section-p-top-v  {
-    position: absolute;
-    left: 32px;
-    top: 40px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
