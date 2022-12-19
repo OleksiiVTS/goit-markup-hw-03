@@ -21,7 +21,6 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #ccc;
     color: #2E2F42;
-    outline: 2px solid tomato;
 }
 h1, h2, h3, h4, {
     margin: 0;
@@ -56,6 +55,7 @@ a {
     width: 1440px;
     margin: 0 auto;
     padding: 24px 156px;
+    display: flex;
     background: #ffffff;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
                 0px 1px 1px rgba(46, 47, 66, 0.16), 
@@ -63,9 +63,11 @@ a {
 }
     .header-logo {
         display: flex;
+        align-items: center;
         flex-direction: row;
         align-items: flex-start;
         padding: 0px;
+        margin-right: 76px;
     }
     .logo-w {
             font-family: 'Raleway', sans-serif;
@@ -77,9 +79,6 @@ a {
             letter-spacing: 0.03em;
             text-transform: uppercase;
             color: var(--color-hader);
-            flex: none;
-            order: 0;
-            flex-grow: 0;
         }    
     .logo-s {
             font-family: 'Raleway', sans-serif;
@@ -91,9 +90,6 @@ a {
             letter-spacing: 0.03em;
             text-transform: uppercase;
             color: var(--color-text);
-            flex: none;
-            order: 1;
-            flex-grow: 0;
         }
     .header-nav {
         display: flex;
@@ -102,14 +98,13 @@ a {
         gap: 40px;
     }
         .header-nav-link {
-            font-weight: 700;
+            display: block;
+            font-weight: 500;
             font-size: 16px;
             line-height: 1.5;
             letter-spacing: 0.02em;
             color: var(--color-text);
-            flex: none;
-            order: 1;
-            flex-grow: 0;
+
         } 
         .header-nav-link:hover,
         .header-nav-link:focus {
@@ -123,6 +118,7 @@ a {
         flex-direction: row;
         align-items: flex-start;
         gap: 40px;
+        margin-left: auto;
     }
     .header-contacts-linc-kontakt {
         font-weight: 400;
@@ -348,7 +344,9 @@ a {
 /* Гребані КНОПКИ */
 .potfolio-section {
     width: 1152px;
-    padding: 96px 12px 120px;
+    padding: 0 12px;
+    padding-top: 96px;
+    padding-bottom: 120px;
     margin: auto;
 } 
 .main-skills-ul.filfers-button {
@@ -357,6 +355,8 @@ a {
     align-items: flex-start;
     gap: 24px;
     margin-bottom: 72px;
+    margin-left: 271px;
+    
     
 }
 .filfers-button-potfolio {
@@ -370,9 +370,6 @@ a {
     background: #F4F4FD;
     border: 1px solid #E7E9FC;
     border-radius: 4px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 
     font-weight: 500;
     font-size: 15px;
@@ -394,16 +391,24 @@ a {
         color: #222020;
     }
 /* Projekts section */ 
-
+.filfers-bloc {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
 .projekts-section-bloc {
     box-sizing: border-box;
+    padding-bottom: 32px;
     width: 360px;
     height: 420px;
-    margin: 0px 0px 48px 156px;
     border: 0.5px solid #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-.projekts-section h3 {
+.projekts-section-bloc > h3 {
+    margin-top: 32px;
+    margin-left: 16px;
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -421,6 +426,8 @@ a {
         opacity: 0;
 }
 .projekts-section-p-under {
+    margin: 0;
+    margin-left: 16px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
