@@ -152,6 +152,40 @@ p {
 }
 /* footer */
 /* fonts */
+
+.logo-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+    .logo-w-footer {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 1.2;
+        display: flex;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #4D5AE5;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .logo-s-footer {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 1.2;
+        display: flex;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #F4F4FD;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
 .footer-p {
   margin: 0;
   width: 264px;
@@ -411,6 +445,7 @@ p {
 .projekts-section-p-top {
   opacity: 0;
 }
+
 .projekts-section-p-under {
   font-weight: 400;
   font-size: 16px;
